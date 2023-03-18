@@ -1,0 +1,312 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonrs/stylesheet.css);
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display';
+}
+.page{
+    background: #F0F0F0;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcment-bar{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    margin: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+.announcment-bar_accent{
+    margin: 0;
+    padding: 0;
+    border-bottom: 0.5px solid #ffffff;
+}
+.main{
+    margin: 0;
+    padding: 0;
+    max-width: 1280px;
+    margin: auto;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #000000;
+    padding: 23px 0 23px;
+    margin: 0 0 40px;
+}
+.navigation__logo{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    width: fit-content;
+    transition: .2s;
+}
+.navigation__logo:hover{
+    opacity: .6;
+}
+.navigation__logo-image{
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+}
+.navigation__logo-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+.navigation__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+.navigation__button{
+    text-decoration: none;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    transition: .2s;
+}
+.navigation__button:hover{
+    opacity: .6;
+}
+.navigation__button:first-child, :nth-child(3){
+    cursor: pointer;
+}
+.navigation__arrow{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/Expand.svg);
+    width: 10px;
+    height: 7px;
+}
+.navigation__profile-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.navigation__profile-icon{
+    height: 22px;
+    width: 22px;
+    margin: 0;
+    padding: 0;
+    transition: .2s;
+    position: relative;
+}
+.navigation__profile-icon:hover{
+    opacity: .6;
+}
+.navigation__profile-icon:first-child{
+    background-image: url(../images/Search.svg);
+}
+.navigation__profile-icon:nth-child(2){
+    background-image: url(../images/User.svg);
+}
+.navigation__profile-icon:nth-child(3){
+    background-image: url(../images/Cart.svg);
+}
+.navigation__in-cart{
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #228b22;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.navigation__in-cart_active{
+    visibility: visible;
+    opacity: 1;
+}
+.product-information{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.product-information__left-side{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-information__images{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+.product-information__thumbnail-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 30px;
+}
+.product-information__thumbnail{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.product-information__thumbnail_active{
+    border-bottom: 1px solid #000000;
+}
+.product-information__main-image{
+    height: 540px;
+    width: 522px;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+}
+.product-information__product-name{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    margin: 0;
+    padding: 0;
+}
+.product-information__rating{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    transition: .2s;
+    width: fit-content;
+}
+.product-information__rating:hover{
+    opacity: .6;
+}
+.product-information__rating-stars-list{
+    margin: 0 0 0 5px;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+.product-information__price{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.product-information__current-price{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+}
+.product-information__ex-price{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 21px;
+    text-decoration: line-through;
+    opacity: .5;
+}
+.product-information__product-main-info{
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.product-information__clor{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.product-information__clor_blue{
+    background-color: #5cbdf9;
+}
+.product-information__clor_graphite{
+    background-color: #474a51;
+}
+.product-information__clor_gold{
+    background-color: #ffd700;
+}
+.product-information__clor_silver{
+    background-color: #c0c0c0;}
+.product-information__clor_starlight{
+    background-color: #bcc0cc;
+}
+.product-information__color-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.product-information__product-color{
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-information__clor_active{
+   border: 2px solid red;
+}
+.product-information__clor-title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+}
