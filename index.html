@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasskazovo</title>
+    <script src="./scripts/index.js" defer type="module"></script>
 </head>
 <body class="body">
     <div class="page">
@@ -18,7 +19,15 @@
                     <h2 class="navigation__logo-title">Rasskazovo</h2>
                 </a>
                 <div class="navigation__list">
-                    <h2 class="navigation__button">Каталог  <div class="navigation__arrow"></div> </h2>
+                    <h2 class="navigation__button navigation__button_catalog">Каталог  <div class="navigation__arrow"></div></h2>
+                    <ul class="navigation__catalog-list">
+                        <a href="" class="navigation__catalog-item ">Смартфоны</a>
+                        <a href="" class="navigation__catalog-item ">Бытовая техника</a>
+                        <a href="" class="navigation__catalog-item ">Компьтютеры</a>
+                        <a href="" class="navigation__catalog-item ">Планшеты</a>
+                        <a href="" class="navigation__catalog-item ">Техника для кухни</a>
+                        <a href="" class="navigation__catalog-item ">Офис и мебель</a>
+                    </ul>
                     <a href="#" class="navigation__button">Магазины</a>
                     <a href="#" class="navigation__button">Покупателям</a>
                     <a href="#" class="navigation__button">О нас</a>
@@ -41,7 +50,7 @@
                             <img src="./images/iph13-side.png" alt="изображение товара" class="product-information__thumbnail">
                             <img src="./images/iph13-cams.png" alt="изображение товара" class="product-information__thumbnail">
                         </ul>
-                        <img src="./images/iph13.png" alt="изображение товара" class="product-information__main-image">
+                        <img alt="изображение товара" class="product-information__main-image">
                     </div>
                 </div>
                 <div class="product-information__right-side">
@@ -51,7 +60,7 @@
                         <h3 class="product-information__current-price">72.990 &#8381;</h3>
                         <span class="product-information__ex-price">79.990 &#8381;</span>
                     </div>
-                    <a href="#" class="product-information__rating"><span class="product-information__rating-number">4.7</span>
+                    <div class="product-information__rating"><span class="product-information__rating-number">4.7</span>
                         (<span class="product-information__rating-quantity">347</span>)
                         <div class="product-information__rating-stars-list">
                             <img src="./images/Reviews.svg" alt="" class="product-information__rating-star">
@@ -59,7 +68,7 @@
                             <img src="./images/Reviews.svg" alt="" class="product-information__rating-star">
                             <img src="./images/Reviews.svg" alt="" class="product-information__rating-star">
                             <img src="./images/Reviews.svg" alt="" class="product-information__rating-star">
-                        </div></a>
+                        </div></div>
                     </div>
                 <div class="product-information__product-color">
                     <h4 class="product-information__color-title">Цвет: </h4>
@@ -130,9 +139,9 @@
                 </div>
             </section>
             <section class="reviews">
-                <h1 class="reviews__title">Что говорят люди</h1>
+                <h1 class="reviews__title" id="reviews">Что говорят люди</h1>
                 <div class="reviews__container">
-                    <a href="" class="reviews__review-container">
+                    <div class="reviews__review-container">
                         <div class="reviews__rating-container">
                             <div class="reviews__rating-list">
                                 <img src="./images/rating-star.png" alt="" class="reviews__star">
@@ -146,8 +155,8 @@
                         <h3 class="reviews__review-title">Лучший в магазине</h3>
                         <p class="reviews__review-description">Я очень долго хотел себе айфон и тут появилвась такая хорошая возможность</p>
                         <h3 class="reviews__review-name">Герман Залуцкий</h3>
-                    </a>
-                    <a href="" class="reviews__review-container">
+                    </div>
+                    <div class="reviews__review-container">
                         <div class="reviews__rating-container">
                             <div class="reviews__rating-list">
                                 <img src="./images/rating-star.png" alt="" class="reviews__star">
@@ -161,8 +170,8 @@
                         <h3 class="reviews__review-title">Apple есть apple тут ничего не скажешь</h3>
                         <p class="reviews__review-description">Пересмотрел все возможные обзоры перед покупкой</p>
                         <h3 class="reviews__review-name">Владислав Триноженко</h3>
-                    </a>
-                    <a href="" class="reviews__review-container">
+                    </div>
+                    <div class="reviews__review-container">
                         <div class="reviews__rating-container">
                             <div class="reviews__rating-list">
                                 <img src="./images/rating-star.png" alt="" class="reviews__star">
@@ -176,8 +185,8 @@
                         <h3 class="reviews__review-title">Какой же пушечный экран</h3>
                         <p class="reviews__review-description">Этот экран не оставляет шансов конкурентам</p>
                         <h3 class="reviews__review-name">Замай Федорович</h3>
-                    </a>
-                    <a href="" class="reviews__review-container">
+                    </div>
+                    <div class="reviews__review-container">
                         <div class="reviews__rating-container">
                             <div class="reviews__rating-list">
                                 <img src="./images/rating-star.png" alt="" class="reviews__star">
@@ -190,7 +199,7 @@
                         <h3 class="reviews__review-title">Везде есть недостатки</h3>
                         <p class="reviews__review-description">Счастью не было предела, пока не попробовала ночную съемку</p>
                         <h3 class="reviews__review-name">Кристина Боровая</h3>
-                    </a>
+                    </div>
                 </div>
                 <button class="reviews__write-button">Написать отзыв</button>
             </section>
@@ -337,6 +346,13 @@
             </div>
             </div> 
         </footer>
+        <div class="popup">
+            <div class="popup__hiden-overlay"></div>
+            <div class="popup__container">
+                <img src="./images/close-icon.svg" alt="" class="popup__close-icon">
+                <img alt="Изображения товара." class="popup__image" src="">
+            </div>
+        </div>
     </div>
 </body>
 </html>

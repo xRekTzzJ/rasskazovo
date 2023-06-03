@@ -88,6 +88,7 @@
     flex-direction: row;
     align-items: center;
     gap: 25px;
+    position: relative;
 }
 .navigation__button{
     text-decoration: none;
@@ -214,6 +215,7 @@
     margin: 0;
     padding: 0;
     object-fit: contain;
+    cursor: pointer;
 }
 .product-information__product-name{
     font-style: normal;
@@ -232,6 +234,7 @@
     color: #000000;
     transition: .2s;
     width: fit-content;
+    cursor: pointer;
 }
 .product-information__rating:hover{
     opacity: .6;
@@ -576,7 +579,6 @@
     line-height: 26px;
 }
 .reviews__review-container{
-    text-decoration: none;
     color: #000000;
     margin: 50px 0 41px;
     padding: 34px 0 0 20px;
@@ -586,6 +588,7 @@
     flex-direction: column;
     transition: .2s;
     box-shadow: 0px 2px 4px rgba(7, 4, 146, 0.1), 0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
+    cursor: pointer;
 }
 .reviews__review-container:hover{
     opacity: .7;
@@ -1039,3 +1042,83 @@
         text-align: center;
     }
   }
+  .navigation__catalog-list{
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+    background-color: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    border: 1px solid black;
+  }
+  .navigation__catalog-item{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 21px;
+  }
+  .navigation__catalog-list_opened{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation__catalog-item:hover{
+    color: forestgreen;
+}
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.popup__image{
+    border: none;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: #F0F0F0;
+}
+.popup_open{
+    visibility: visible;
+    opacity: 1;
+}
+.popup__container{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 3;
+}
+.popup__close-icon{
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+}
+.popup__hiden-overlay{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
